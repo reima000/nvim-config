@@ -30,3 +30,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 
 -- Map Ctrl + d to scroll half-page down and center cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+
+vim.keymap.set("n", "p", function()
+  -- Paste from the default register
+  vim.cmd("normal! p")
+  -- Remove any ^M (\r) characters
+  vim.cmd(":%s/\\r//g")
+end, { noremap = true, silent = true })
