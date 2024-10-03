@@ -31,14 +31,14 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 -- Map Ctrl + d to scroll half-page down and center cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 
-vim.keymap.set("n", "p", function()
-  -- Paste from the default register
-  vim.cmd("normal! p")
-  -- Remove any ^M (\r) characters
-  vim.cmd(":%s/\\r//g")
-end, { noremap = true, silent = true })
+-- vim.keymap.set("n", "p", function()
+--   -- Paste from the default register
+--   vim.cmd("normal! p")
+--   -- Remove any ^M (\r) characters
+--   vim.cmd(":%s/\\r//g")
+-- end, { noremap = true, silent = true })
 -- Lua
-vim.keymap.set("n", "r", require("substitute").operator, { noremap = true })
-vim.keymap.set("n", "rr", require("substitute").line, { noremap = true })
-vim.keymap.set("n", "R", require("substitute").eol, { noremap = true })
-vim.keymap.set("x", "r", require("substitute").visual, { noremap = true })
+vim.keymap.set("n", "x", require("substitute").operator, { noremap = true })
+vim.keymap.set("n", "xx", require("substitute").line, { noremap = true })
+vim.keymap.set("n", "X", require("substitute").eol, { noremap = true })
+vim.keymap.set("x", "x", require("substitute").visual, { noremap = true })
