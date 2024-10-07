@@ -25,11 +25,21 @@ vim.keymap.set("v", "<A-j>", function()
   return ":m '>+" .. count .. "<CR>gv=gv"
 end, { noremap = true, silent = true, expr = true })
 
--- Map Ctrl + u to scroll half-page up and center cursor
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+-- -- Map Ctrl + u to scroll half-page up and center cursor
+-- vim.keymap.set("n", "<C-u>", function()
+--   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-u>", true, false, true), "n", true)
+--   vim.defer_fn(function()
+--     vim.cmd("normal! zz")
+--   end, 450)
+-- end, { noremap = true, silent = true })
 
--- Map Ctrl + d to scroll half-page down and center cursor
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+-- -- Map Ctrl + d to scroll half-page down and center cursor
+-- vim.keymap.set("n", "<C-d>", function()
+--   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-d>", true, false, true), "n", true)
+--   vim.defer_fn(function()
+--     vim.cmd("normal! zz")
+--   end, 450)
+-- end, { noremap = true, silent = true })
 
 -- vim.keymap.set("n", "p", function()
 --   -- Paste from the default register
