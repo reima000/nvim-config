@@ -1,0 +1,22 @@
+return {}
+-- opts = function()
+--   local ret = {
+--     servers = {
+--       ts_ls = {
+--         plugins = {
+--           {
+--             name = "@vue/typescript-plugin",
+--             location = "/path/to/@vue/language-server",
+--             languages = { "vue" },
+--           },
+--         },
+--       },
+--       volar = {
+--         vue = {
+--           hybridMode = false,
+--         },
+--       },
+--     },
+--   }
+--   return ret
+-- end
