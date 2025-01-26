@@ -4,14 +4,6 @@
 
 vim.opt.mouse = ""
 
-require("telescope").setup({
-  defaults = {
-    file_ignore_patterns = {
-      "node_modules",
-    },
-  },
-})
-
 vim.api.nvim_create_user_command("RemoveCR", function()
   vim.cmd(":%s/\\r//g")
 end, { desc = "Remove all carriage return characters" })
